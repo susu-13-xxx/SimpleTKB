@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm Môn Học Mới"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên môn học"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/edtRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phòng học (Ví dụ: P.202)"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/edtTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên giảng viên"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/edtDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Thứ trong tuần (Ví dụ: Thứ 2)"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/edtTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Thời gian (Ví dụ: Tiết 1-3)"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lưu Môn Học"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"/>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <!-- Dùng RelativeLayout bên trong để dễ chia nửa trái / nửa phải -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- NỬA BÊN TRÁI: Tên môn, phòng học, thời gian -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/tvTeacher"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSubjectName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên Môn Học"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tvRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Phòng: P.302"
+                android:textSize="13sp"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Thứ 2 (Tiết 1-3)"
+                android:textSize="13sp"
+                android:textStyle="italic"
+                android:textColor="@android:color/holo_blue_dark" />
+        </LinearLayout>
+
+        <!-- Ý 3: NỬA BÊN PHẢI: Giảng viên nằm gọn sang góc phải ô thông tin -->
+        <TextView
+            android:id="@+id/tvTeacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:maxWidth="130dp"
+            android:gravity="end"
+            android:text="GV: Nguyễn Văn A"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_orange_dark" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

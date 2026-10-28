@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- 1. Ô tìm kiếm nằm ở trên cùng -->
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="🔍 Tìm kiếm môn học..."
+        android:inputType="text"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 2. Dải nút chọn Thứ nằm ngay DƯỚI ô tìm kiếm -->
+    <HorizontalScrollView
+        android:id="@+id/scrollDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@id/edtSearch"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btnAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tất cả" android:layout_marginEnd="4dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            <Button android:id="@+id/btnT2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thứ 2" android:layout_marginEnd="4dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            <Button android:id="@+id/btnT3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thứ 3" android:layout_marginEnd="4dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            <Button android:id="@+id/btnT4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thứ 4" android:layout_marginEnd="4dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            <Button android:id="@+id/btnT5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thứ 5" android:layout_marginEnd="4dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            <Button android:id="@+id/btnT6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thứ 6" android:layout_marginEnd="4dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            <Button android:id="@+id/btnT7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thứ 7" android:layout_marginEnd="4dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            <Button android:id="@+id/btnCN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chủ Nhật" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- 3. Danh sách môn học nằm dưới dải nút chọn thứ và trên nút Thêm -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/scrollDays"
+        android:layout_above="@id/btnAddSubject"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Màn hình Thùng rỗng khi không có môn -->
+    <LinearLayout
+        android:id="@+id/layoutEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@android:drawable/ic_menu_agenda" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Lịch học trống trơn, thêm môn ngay nào! 🎒"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!-- 4. Nút Thêm môn học nằm ở đáy màn hình -->
+    <Button
+        android:id="@+id/btnAddSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="+ Thêm Môn Học Mới"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>
